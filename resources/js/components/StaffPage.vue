@@ -124,8 +124,8 @@
                           console.log(res.data.length);
 
                       for(let i = 0; i < res.data.length; i++) {
-                        console.log(res.data[i]);
                         if(res.data[i] !== null && res.data[i].day === this.today && String(res.data[i].staff_id) === this.select_staff_id) {
+                        console.log(res.data[i]);
                           this.change_work_check = res.data[i].work_check.split(',');
                           this.staff_memo = res.data[i].staff_memo;
                           this.complete_work_id = res.data[i].id;
