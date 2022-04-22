@@ -96,8 +96,9 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/api/complete_works').then(function (res) {
         console.log(res);
         console.log(res.data);
+        console.log(res.data.length);
 
-        for (var i = 0; i <= res.data.length; i++) {
+        for (var i = 0; i < res.data.length; i++) {
           console.log(res.data[i]);
 
           if (res.data[i] !== [] && res.data[i].day === _this3.today && String(res.data[i].staff_id) === _this3.select_staff_id) {
