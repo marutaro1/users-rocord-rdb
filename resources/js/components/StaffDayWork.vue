@@ -286,6 +286,7 @@
 
               complete_work = {
                   staff_name: res.data.staff_name,
+                  staff_id: res.data.id,
                   day: this.today,
                   work_check: ',',
                   staff_memo: '・',
