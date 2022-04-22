@@ -111,7 +111,7 @@
                 }
                 console.log(array_length)
              
-                  axios.put("//api/complete_works/" + String(this.complete_work_id), add_work_check).then((res) => {
+                  axios.put("/api/complete_works" + this.complete_work_id, add_work_check).then((res) => {
                     this.staff_memo = res.data.staff_memo;
                   });
                 
@@ -125,6 +125,7 @@
                           this.change_work_check = res.data[i].work_check.split(',');
                           this.staff_memo = res.data[i].staff_memo;
                           this.complete_work_id = res.data[i].id;
+                          console.log(this.complete_work_id);
                          
                         }
                       }
