@@ -85,7 +85,7 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         console.log(array_length);
-        axios.put("/api/complete_works/" + String(_this2.complete_work_id), add_work_check).then(function (res) {
+        axios.put("/api/complete_works" + _this2.complete_work_id, add_work_check).then(function (res) {
           _this2.staff_memo = res.data.staff_memo;
         });
       });
@@ -99,6 +99,7 @@ __webpack_require__.r(__webpack_exports__);
             _this3.change_work_check = res.data[i].work_check.split(',');
             _this3.staff_memo = res.data[i].staff_memo;
             _this3.complete_work_id = res.data[i].id;
+            console.log(_this3.complete_work_id);
           }
         }
       });
