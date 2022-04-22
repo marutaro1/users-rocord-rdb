@@ -85,7 +85,7 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         console.log(array_length);
-        axios.post("/api/complete_works/" + String(_this2.complete_work_id), add_work_check).then(function (res) {
+        axios.put("/api/complete_works/" + String(_this2.complete_work_id), add_work_check).then(function (res) {
           _this2.staff_memo = res.data.staff_memo;
         });
       });
