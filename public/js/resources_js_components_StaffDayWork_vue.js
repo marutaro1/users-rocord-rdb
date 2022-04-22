@@ -128,11 +128,18 @@ __webpack_require__.r(__webpack_exports__);
         });
         axios.post('/api/staff_daily_work', daily_work[i]).then(function (res) {
           console.log(res.data);
+          var work_checks = [];
+          var work_check_length = res.data.works.split(',');
+
+          for (var n = 0; n < work_check_length.length; n++) {
+            work_checks.push('false');
+          }
+
           complete_work = {
             staff_name: res.data.staff_name,
             staff_id: res.data.id,
             day: _this4.today,
-            work_check: ',',
+            work_check: work_checks,
             staff_memo: '・'
           };
           axios.post('/api/complete_works', complete_work).then(function (res) {

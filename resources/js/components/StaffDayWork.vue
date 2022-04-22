@@ -283,12 +283,17 @@
             );
             axios.post('/api/staff_daily_work', daily_work[i]).then((res) => {
               console.log(res.data);
+              const work_checks = [];
+              const work_check_length = res.data.works.split(',');
+              for(let n = 0; n < work_check_length.length; n++) {
+               work_checks.push('false')
+              }
 
               complete_work = {
                   staff_name: res.data.staff_name,
                   staff_id: res.data.id,
                   day: this.today,
-                  work_check: ',',
+                  work_check: work_checks,
                   staff_memo: '・',
                 }
               
