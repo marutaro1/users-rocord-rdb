@@ -111,7 +111,10 @@ __webpack_require__.r(__webpack_exports__);
       };
     },
     addStaffDailyWork: function addStaffDailyWork(staff) {
+      var _this4 = this;
+
       var daily_work = [];
+      var complete_work = [];
 
       for (var i = 0; i < staff.length; i++) {
         staff[i].staff_work.push(staff[i].add_staff_work_one, staff[i].add_staff_work_two, staff[i].add_staff_work_three);
@@ -125,6 +128,15 @@ __webpack_require__.r(__webpack_exports__);
         });
         axios.post('/api/staff_daily_work', daily_work[i]).then(function (res) {
           console.log(res.data);
+          complete_work.push({
+            staff_name: res.data.staff_name,
+            day: _this4.today,
+            work_check: ',',
+            staff_memo: '・'
+          });
+          axios.post('/api/complete_works', complete_work).then(function (res) {
+            console.log(res);
+          });
         });
       }
 
@@ -132,11 +144,11 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   created: function created() {
-    var _this4 = this;
+    var _this5 = this;
 
     axios.get('/api/users/' + this.login_user_id).then(function (res) {
       console.log(res.data);
-      _this4.login_user = res.data;
+      _this5.login_user = res.data;
     });
   }
 });

@@ -268,6 +268,7 @@
         },
         addStaffDailyWork(staff) {
           const daily_work = [];
+          const complete_work = [];
           for(let i = 0; i < staff.length; i++) {
           staff[i].staff_work.push(staff[i].add_staff_work_one, staff[i].add_staff_work_two, staff[i].add_staff_work_three);
             daily_work.push(
@@ -282,7 +283,20 @@
             );
             axios.post('/api/staff_daily_work', daily_work[i]).then((res) => {
               console.log(res.data);
-            });
+
+              complete_work.push(
+                {
+                  staff_name: res.data.staff_name,
+                  day: this.today,
+                  work_check: ',',
+                  staff_memo: '・',
+                }
+              )
+
+              axios.post('/api/complete_works', complete_work).then((res) => {
+                console.log(res);
+              })
+            })
           };
         },
 
