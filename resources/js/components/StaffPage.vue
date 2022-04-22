@@ -111,7 +111,7 @@
                 }
                 console.log(array_length)
              
-                  axios.post("/api/complete_works/" + String(this.complete_work_id), add_work_check).then((res) => {
+                  axios.put("/api/complete_works/" + String(this.complete_work_id), add_work_check).then((res) => {
                     this.staff_memo = res.data.staff_memo;
                   });
                 

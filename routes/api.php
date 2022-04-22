@@ -85,7 +85,7 @@ Route::post('/staff_daily_work', [StaffDailyWorkController::class, 'store']);
 Route::get('/complete_works', [CompleteWorkCheckController::class, 'index']);
 Route::post('/complete_works', [CompleteWorkCheckController::class, 'store']);
 Route::get('/complete_works/{complete_work_id}', [CompleteWorkCheckController::class, 'show']);
-Route::post('/complete_works/{complete_work_id}', [CompleteWorkCheckController::class, 'update']);
+Route::put('/complete_works/{complete_work_id}', [CompleteWorkCheckController::class, 'update']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
