@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
         for (var i = 0; i < res.data.length; i++) {
           console.log(res.data[i]);
 
-          if (res.data[i] !== {} && res.data[i].day === _this3.today && String(res.data[i].staff_id) === _this3.select_staff_id) {
+          if (res.data[i] !== null && res.data[i].day === _this3.today && String(res.data[i].staff_id) === _this3.select_staff_id) {
             _this3.change_work_check = res.data[i].work_check.split(',');
             _this3.staff_memo = res.data[i].staff_memo;
             _this3.complete_work_id = res.data[i].id;
