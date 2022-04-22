@@ -94,8 +94,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       axios.get('/api/complete_works').then(function (res) {
-        console.log(res);
-        console.log(res.data);
         console.log(res.data.length);
 
         for (var i = 0; i < res.data.length; i++) {
@@ -161,7 +159,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMousemoveOnce: _cache[2] || (_cache[2] = function () {
       return $options.getSelectStaffDailyWorks && $options.getSelectStaffDailyWorks.apply($options, arguments);
     })
-  }, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.today) + " ", 1
+  }, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.today) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.select_staff_id) + " ", 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: '/staffdaywork/' + $props.login_user_id + '/works',

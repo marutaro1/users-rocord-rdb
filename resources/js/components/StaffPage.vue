@@ -2,6 +2,7 @@
   <div @mousemove.once="getSelectStaffDailyWorks">
     <h3>業務編集</h3>
     {{today}}
+    {{select_staff_id}}
     <router-link :to="'/staffdaywork/' + login_user_id +'/works'" class="btn btn-primary p-1"
       >戻る</router-link
     >
@@ -120,8 +121,7 @@
             },
             getCompleteWorkCheck() {
                 axios.get('/api/complete_works').then((res) => {                 
-                          console.log(res);
-                          console.log(res.data);
+                     
                           console.log(res.data.length);
 
                       for(let i = 0; i < res.data.length; i++) {
