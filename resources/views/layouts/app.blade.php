@@ -64,9 +64,16 @@
                                 <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                                 
                                     @if(Route::currentRouteName() === 'register') 
-                                        <a class="dropdown-item px-0" href="/factoryusers/{{ Auth::id() }}">  
-                                        利用者一覧
+                                    <a class="dropdown-item px-0" href="/newuser">  
+                                        新規利用者登録
                                         </a>
+                                        <a class="dropdown-item px-0" href="/archives/{{ Auth::id() }}">  
+                                        記録まとめ
+                                        </a>
+                                        <a class="dropdown-item px-0" href="/staffdaywork/{{ Auth::id() }}">  
+                                        業務
+                                        </a>
+                                        <a class="dropdown-item px-0" href="{{ route('register') }}">{{ __('新規職員登録') }}</a>
                                     @endif
                                     @if(Route::currentRouteName() !== 'register')
                                         <router-link class="dropdown-item px-0" to="/factoryusers/{{ Auth::id() }}">利用者一覧</router-link>

@@ -46,7 +46,7 @@
          props: {
              id: String,
              login_user_id: String,
-             number: String,
+             number: Number,
          },
          data() {
            return {

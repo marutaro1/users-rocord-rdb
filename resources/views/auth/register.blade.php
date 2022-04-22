@@ -64,7 +64,7 @@
                             <label for="user_department" class="col-md-4 col-form-label">部署:</label>
 
                             <div class="col-md-4 col-6">
-                                <select id="user_department" type="text" class="form-control @error('user_department') is-invalid @enderror" name="user_department" required autocomplete="user_department">
+                                <select id="user_department" class="form-control @error('user_department') is-invalid @enderror" name="user_department" required autocomplete="user_department">
                                     <option value="">選択してください</option>
                                     <option value="caregiver">介護</option>
                                     <option value="nurse">看護</option>
@@ -84,7 +84,7 @@
                             <label for="user_official_position" class="col-md-4 col-form-label">役職:</label>
 
                             <div class="col-md-4 col-6">
-                                <select id="user_official_position" type="text" class="form-control @error('user_official_position') is-invalid @enderror" name="user_official_position" required autocomplete="user_official_position">
+                                <select id="user_official_position" class="form-control @error('user_official_position') is-invalid @enderror" name="user_official_position" required autocomplete="user_official_position">
                                     <option value="">選択してください</option>
                                     <option value="no_position">役職なし</option>
                                     <option value="leader">リーダー</option>

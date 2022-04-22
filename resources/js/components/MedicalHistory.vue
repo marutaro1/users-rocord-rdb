@@ -136,7 +136,7 @@
      export default {
          props: {
              login_user_id: String,
-             id: Number
+             id: String,
          },
          data() {
            return {

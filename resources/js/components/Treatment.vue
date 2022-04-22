@@ -170,7 +170,7 @@
 <script>
      export default {
          props: {
-             id: Number,
+             id: String,
              login_user_id: String,
          },
          data() {

@@ -2,7 +2,6 @@
   <div class="mt-2" @mousemove.once="getManuel">
     <hr />
     <h4>マニュアル</h4>
-    {{fname}}
     <div class="col-12">
       <label class="col-4 col-form-label">タイトル:</label>
       <div class="col-10 col-lg-3">

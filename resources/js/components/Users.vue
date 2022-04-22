@@ -58,7 +58,7 @@
     <div>
       <div v-if="boolean_day_record_check === false">
         <button @click="todayNotRegisteredRecord" class="btn btn-primary mt-2">
-          {{ today }} 記録未登録者
+          {{ real_date.slice(0,10) }} 記録未登録者
         </button>
       </div>
       <div v-else-if="boolean_day_record_check === true">
@@ -116,7 +116,7 @@
 <script>
   export default {
     props: {
-      auth_id: String
+      auth_id: Number
     },
     data() {
       return {
