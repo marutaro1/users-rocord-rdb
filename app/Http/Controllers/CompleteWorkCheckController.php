@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CompleteWorkCheck;
 use Illuminate\Http\Request;
+use App\Models\CompleteWorkCheck;
 
 class CompleteWorkCheckController extends Controller
 {

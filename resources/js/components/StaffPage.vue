@@ -111,7 +111,7 @@
                 }
                 console.log(array_length)
              
-                  axios.post("https://aqueous-thicket-70896.herokuapp.com/api/complete_works/" + String(this.complete_work_id), add_work_check).then((res) => {
+                  axios.post("/api/complete_works/" + String(this.complete_work_id), add_work_check).then((res) => {
                     this.staff_memo = res.data.staff_memo;
                   });
                 
