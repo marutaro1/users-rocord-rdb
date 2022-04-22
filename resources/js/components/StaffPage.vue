@@ -1,6 +1,7 @@
 <template>
   <div @mousemove.once="getSelectStaffDailyWorks">
     <h3>業務編集</h3>
+    {{today}}
     <router-link :to="'/staffdaywork/' + login_user_id +'/works'" class="btn btn-primary p-1"
       >戻る</router-link
     >
