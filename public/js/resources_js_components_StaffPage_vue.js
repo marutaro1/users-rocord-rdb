@@ -85,7 +85,7 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         console.log(array_length);
-        axios.post('/api/complete_works/' + String(_this2.complete_work_id), add_work_check).then(function (res) {
+        axios.post('https://aqueous-thicket-70896.herokuapp.com/api/complete_works/' + String(_this2.complete_work_id), add_work_check).then(function (res) {
           _this2.staff_memo = res.data.staff_memo;
         });
       });
@@ -225,13 +225,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _StaffPage_vue_vue_type_template_id_4d4d1798__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./StaffPage.vue?vue&type=template&id=4d4d1798 */ "./resources/js/components/StaffPage.vue?vue&type=template&id=4d4d1798");
 /* harmony import */ var _StaffPage_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./StaffPage.vue?vue&type=script&lang=js */ "./resources/js/components/StaffPage.vue?vue&type=script&lang=js");
-/* harmony import */ var _work_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _Users_maruokanoborutarou_Desktop_Heroku_herok_deploy_laravel_user_record_backend_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_work_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_StaffPage_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_StaffPage_vue_vue_type_template_id_4d4d1798__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/StaffPage.vue"]])
+const __exports__ = /*#__PURE__*/(0,_Users_maruokanoborutarou_Desktop_Heroku_herok_deploy_laravel_user_record_backend_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_StaffPage_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_StaffPage_vue_vue_type_template_id_4d4d1798__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/StaffPage.vue"]])
 /* hot reload */
 if (false) {}
 
