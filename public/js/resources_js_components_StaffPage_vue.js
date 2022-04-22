@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
         console.log(res);
         console.log(res.data);
 
-        for (var i = 0; i < res.data.length; i++) {
+        for (var i = 0; i <= res.data.length; i++) {
           console.log(res.data[i]);
 
           if (res.data[i] !== [] && res.data[i].day === _this3.today && String(res.data[i].staff_id) === _this3.select_staff_id) {
