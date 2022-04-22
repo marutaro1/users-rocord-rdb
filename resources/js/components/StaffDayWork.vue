@@ -293,7 +293,7 @@
                   staff_name: res.data.staff_name,
                   staff_id: res.data.id,
                   day: this.today,
-                  work_check: work_checks,
+                  work_check: work_checks.toString(),
                   staff_memo: '・',
                 }
               

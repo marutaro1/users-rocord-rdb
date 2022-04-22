@@ -139,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
             staff_name: res.data.staff_name,
             staff_id: res.data.id,
             day: _this4.today,
-            work_check: work_checks,
+            work_check: work_checks.toString(),
             staff_memo: '・'
           };
           axios.post('/api/complete_works', complete_work).then(function (res) {
