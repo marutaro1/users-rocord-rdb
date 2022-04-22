@@ -120,8 +120,10 @@
             getCompleteWorkCheck() {
                 axios.get('/api/complete_works').then((res) => {                 
                           console.log(res);
+                          console.log(res.data);
 
                       for(let i = 0; i < res.data.length; i++) {
+                        console.log(res.data[i])
                         if(res.data[i] !== [] && res.data[i].day === this.today && String(res.data[i].staff_id) === this.select_staff_id) {
                           this.change_work_check = res.data[i].work_check.split(',');
                           this.staff_memo = res.data[i].staff_memo;
