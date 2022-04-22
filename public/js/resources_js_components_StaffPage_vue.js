@@ -94,6 +94,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       axios.get('/api/complete_works').then(function (res) {
+        console.log(res.data);
         console.log(res.data.length);
 
         for (var i = 0; i < res.data.length; i++) {

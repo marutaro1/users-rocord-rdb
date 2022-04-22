@@ -122,6 +122,7 @@
             getCompleteWorkCheck() {
                 axios.get('/api/complete_works').then((res) => {                 
                      
+                          console.log(res.data);
                           console.log(res.data.length);
 
                       for(let i = 0; i < res.data.length; i++) {
