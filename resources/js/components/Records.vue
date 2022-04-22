@@ -383,7 +383,7 @@
 
                   if( responce.data[0].day_record_check === record_data.day.slice(0,10) ) {
                     
-                      const day_record_check_value = this.serchRecords.slice(-1)[0].day.slice(0,10);
+                      const day_record_check_value = this.serchRecords[0].day.slice(0,10);
                
                       const factoryuser = {
                         factoryuser_name: this.factoryuser_name,
