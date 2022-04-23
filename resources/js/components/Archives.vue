@@ -206,6 +206,7 @@
           console.log(res);
         })
       },
+      
       postArchiveMemo(archive) {
         const archive_memo_value = {
           factoryuser_id: archive.factoryuser_id,

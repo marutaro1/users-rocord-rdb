@@ -85,6 +85,7 @@ __webpack_require__.r(__webpack_exports__);
             id: _this2.archives[i].id,
             factoryuser_id: _this2.archives[i].factoryuser_id,
             factoryuser_name: _this2.archives[i].factoryuser_name,
+            factoryuser_number: _this2.archives[i].factoryuser_number,
             staff_id: _this2.archives[i].staff_id,
             staff_name: _this2.archives[i].staff_name,
             day: _this2.serch_archive_today,
