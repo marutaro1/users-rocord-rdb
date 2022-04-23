@@ -178,6 +178,7 @@
               id: this.archives[i].id,
               factoryuser_id: this.archives[i].factoryuser_id,
               factoryuser_name: this.archives[i].factoryuser_name,
+              factoryuser_number: this.archives[i].factoryuser_number,
               staff_id: this.archives[i].staff_id,
               staff_name: this.archives[i].staff_name,
               day: this.serch_archive_today,
