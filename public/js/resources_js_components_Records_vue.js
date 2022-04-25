@@ -246,6 +246,7 @@ function _arrayLikeToArray(arr, len) {
       axios.get('/api/factoryusers/' + this.id + '/records').then(function (res) {
         _this5.factoryuser_record_data = res.data;
         console.log(res.data);
+        console.log('get確認');
       });
     },
     getSelectDay: function getSelectDay(start, end) {
