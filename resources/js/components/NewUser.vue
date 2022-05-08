@@ -79,16 +79,6 @@
           console.log(res);
         });
       },
-      submitTest() {
-        for(let i = 0; i < 100; i++) {
-          this.factoryuser_name = 'test_user:' + i;
-          this.birthday = '1970-11-16';
-          this.care_level = '自立';
-          this.number = i + '0';
-          this.add_number = 0;
-          this.submit();
-        }
-      },
 
     }
   }
