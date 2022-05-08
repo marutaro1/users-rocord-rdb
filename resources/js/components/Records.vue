@@ -318,7 +318,7 @@
              })
            },
            testSubmit() {
-             for(let i = 0; i < 50; i++) {
+             for(let i = 50; i < 80; i++) {
                this.record_value = i;
                this.submit();
              }

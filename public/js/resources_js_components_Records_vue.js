@@ -206,7 +206,7 @@ function _arrayLikeToArray(arr, len) {
       });
     },
     testSubmit: function testSubmit() {
-      for (var i = 0; i < 50; i++) {
+      for (var i = 50; i < 80; i++) {
         this.record_value = i;
         this.submit();
       }
