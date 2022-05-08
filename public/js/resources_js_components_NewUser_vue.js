@@ -33,6 +33,16 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('/api/factoryusers', factoryuser).then(function (res) {
         console.log(res);
       });
+    },
+    submitTest: function submitTest() {
+      for (var i = 0; i < 100; i++) {
+        this.factoryuser_name = 'test_user:' + i;
+        this.birthday = '1970-11-16';
+        this.care_level = '自立';
+        this.number = i + '0';
+        this.add_number = 0;
+        this.submit();
+      }
     }
   }
 });
@@ -197,7 +207,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[5] || (_cache[5] = function () {
       return $options.submit && $options.submit.apply($options, arguments);
     })
-  }, "登録")]);
+  }, "登録"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "btn btn-primary",
+    onClick: _cache[6] || (_cache[6] = function () {
+      return $options.submitTest && $options.submitTest.apply($options, arguments);
+    })
+  }, "test_data登録")]);
 }
 
 /***/ }),

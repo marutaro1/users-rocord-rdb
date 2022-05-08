@@ -52,6 +52,7 @@
     </div>
     <br />
     <button class="btn btn-primary" @click="submit">登録</button>
+    <button class="btn btn-primary" @click="submitTest">test_data登録</button>
   </div>
 </template>
 <script>
@@ -77,7 +78,18 @@
         axios.post('/api/factoryusers', factoryuser).then((res) => {
           console.log(res);
         });
-      }
+      },
+      submitTest() {
+        for(let i = 0; i < 100; i++) {
+          this.factoryuser_name = 'test_user:' + i;
+          this.birthday = '1970-11-16';
+          this.care_level = '自立';
+          this.number = i + '0';
+          this.add_number = 0;
+          this.submit();
+        }
+      },
+
     }
   }
 </script>
