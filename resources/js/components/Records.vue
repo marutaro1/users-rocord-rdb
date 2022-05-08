@@ -11,6 +11,7 @@
         <textarea class="form-control" v-model="record_value"> </textarea>
       </div>
       <button @click="submit" class="btn btn-primary mx-1">登録</button>
+      <button @click="testSubmit" class="btn btn-primary mx-1">test登録</button>
     </div>
 
     <hr />
@@ -315,6 +316,12 @@
                 })
 
              })
+           },
+           testSubmit() {
+             for(let i = 0; i < 50; i++) {
+               this.record_value = i;
+               this.submit();
+             }
            },
 
            updateRecord(record_id) {

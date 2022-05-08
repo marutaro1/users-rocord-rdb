@@ -52,7 +52,6 @@
     </div>
     <br />
     <button class="btn btn-primary" @click="submit">登録</button>
-    <button class="btn btn-primary" @click="submitTest">test_data登録</button>
   </div>
 </template>
 <script>
