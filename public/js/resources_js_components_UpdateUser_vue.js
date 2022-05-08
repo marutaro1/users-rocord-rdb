@@ -39,7 +39,7 @@ __webpack_require__.r(__webpack_exports__);
         axios.put('/api/factoryusers/' + _this.id, factoryuser).then(function (responce) {
           console.log(responce);
 
-          _this.$router.push('/factoryusers/' + _this.login_user_id + '/' + _this.id + '/records');
+          _this.$router.go('/factoryusers/' + _this.login_user_id + '/' + _this.id + '/records');
         });
       });
     },

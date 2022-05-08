@@ -68,7 +68,8 @@
               }
               axios.put('/api/factoryusers/' + this.id, factoryuser).then((responce) => {
                 console.log(responce);
-                this.$router.push('/factoryusers/' + this.login_user_id + '/' + this.id + '/records' );
+                this.$router.go('/factoryusers/' + this.login_user_id + '/' + this.id + '/records' );
+
               })
             })
           },
