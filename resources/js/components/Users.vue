@@ -155,7 +155,7 @@
                   const factoryuser_array  = [];
                   for (let i in this.factoryusers) {
                     const factoryuserData = this.factoryusers[i];
-                    const room_number = String(factoryuserData.number).slice(0, -2);
+                    const room_number = String(factoryuserData.number).slice(0, -3);
                     if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
