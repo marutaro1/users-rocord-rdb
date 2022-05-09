@@ -160,11 +160,11 @@
                     if (
                       factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
                       factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1 &&
+                      this.floorKeyword !== '' &&
                       room_number === this.floorKeyword 
                     ) {
                       factoryuser_array.push(factoryuserData);
-                    } 
-                    else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
+                    } else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
                       factoryuser_array.push(factoryuserData);
