@@ -156,12 +156,20 @@
                   for (let i in this.factoryusers) {
                     const factoryuserData = this.factoryusers[i];
                     const room_number = String(factoryuserData.number).slice(0, -3);
-                    if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
-                        room_number.indexOf(this.floorKeyword) !== -1 &&
+                    
+                    if (
+                      factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
+                      factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1 &&
+                      room_number === this.floorKeyword 
+                    ) {
+                      factoryuser_array.push(factoryuserData);
+                    } 
+                    else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
                       factoryuser_array.push(factoryuserData);
                     }
+
                   };
                   const sort_factoryuser_data = factoryuser_array.slice()
                   .sort((a, b) => {
