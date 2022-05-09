@@ -50,9 +50,8 @@ __webpack_require__.r(__webpack_exports__);
       for (var i in this.factoryusers) {
         var factoryuserData = this.factoryusers[i];
         var room_number = String(factoryuserData.number).slice(0, -2);
-        var floorKeyword = this.floorKeyword.slice(0, -1);
 
-        if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && room_number.indexOf(floorKeyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1) {
+        if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && room_number === this.floorKeyword && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1) {
           factoryuser_array.push(factoryuserData);
         }
       }
