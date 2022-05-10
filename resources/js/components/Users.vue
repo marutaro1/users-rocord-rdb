@@ -164,7 +164,7 @@
                     }
                     else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
                         room_number === this.floorKeyword &&
-                        this.floorKeyword === '1' && 10000 < factoryuserData.number &&
+                        this.floorKeyword === '1' && 1000 <= Number(factoryuserData.number) &&
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
