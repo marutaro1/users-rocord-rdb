@@ -2,29 +2,16 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Session\TokenMismatchException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
 class Handler extends ExceptionHandler
 {
-    
     /**
      * A list of the exception types that are not reported.
      *
      * @var array<int, class-string<Throwable>>
      */
-
-    public function render($request, Exception $exception)
-    {
-        //エラー画面をユーザーに見せる必要はないので、ログイン画面にリダイレクトさせる
-        if ($exception instanceof TokenMismatchException) {
-            return redirect('/login');
-        }
-
-        return parent::render($request, $exception);
-    }
-
     protected $dontReport = [
         //
     ];
