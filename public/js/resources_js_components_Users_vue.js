@@ -53,9 +53,9 @@ __webpack_require__.r(__webpack_exports__);
 
         if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1 && room_number.indexOf(this.floorKeyword) !== -1) {
           factoryuser_array.push(factoryuserData);
-        } else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && room_number === this.floorKeyword && this.floorKeyword === '1' && 1000 <= Number(factoryuserData.number) && room_number.indexOf(this.floorKeyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1) {
-          return;
-        } else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && room_number === this.floorKeyword && room_number.indexOf(this.floorKeyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1) {
+        } else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && room_number === this.floorKeyword && this.floorKeyword === '1' && Number(factoryuserData.number) < 1000 && room_number.indexOf(this.floorKeyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1) {
+          factoryuser_array.push(factoryuserData);
+        } else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && room_number === this.floorKeyword && this.floorKeyword !== '1' && room_number.indexOf(this.floorKeyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1) {
           factoryuser_array.push(factoryuserData);
         }
       }
