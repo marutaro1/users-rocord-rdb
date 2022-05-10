@@ -8,11 +8,23 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
+    
     /**
      * A list of the exception types that are not reported.
      *
      * @var array<int, class-string<Throwable>>
      */
+
+    public function render($request, Exception $exception)
+    {
+        //エラー画面をユーザーに見せる必要はないので、ログイン画面にリダイレクトさせる
+        if ($exception instanceof TokenMismatchException) {
+            return redirect('/login');
+        }
+
+        return parent::render($request, $exception);
+    }
+
     protected $dontReport = [
         //
     ];
@@ -28,17 +40,6 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-    public function render($request, Exception $exception)
-    {
-      
-        //エラー画面をユーザーに見せる必要はないので、ログイン画面にリダイレクトさせる
-        if ($exception instanceof TokenMismatchException) {
-            return redirect('/login');
-        }
-
-        return parent::render($request, $exception);
-    }
-
     /**
      * Register the exception handling callbacks for the application.
      *
@@ -48,7 +49,6 @@ class Handler extends ExceptionHandler
     {
         $this->reportable(function (Throwable $e) {
             //
-           
         });
     }
     
