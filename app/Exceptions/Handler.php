@@ -4,7 +4,6 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
-use Illuminate\Session\TokenMismatchException;
 
 class Handler extends ExceptionHandler
 {
@@ -28,27 +27,24 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
+    /**
+     * Register the exception handling callbacks for the application.
+     *
+     * @return void
+     */
     public function render($request, Exception $exception)
     {
-        // 追加2
-        //エラー画面をユーザーに見せる必要はないので、ログイン画面にリダイレクトさせる
         if ($exception instanceof TokenMismatchException) {
             return redirect('/login');
         }
 
         return parent::render($request, $exception);
     }
-
-    /**
-     * Register the exception handling callbacks for the application.
-     *
-     * @return void
-     */
-    // public function register()
-    // {
-    //     $this->reportable(function (Throwable $e) {
-    //         //
-    //     });
-    // }
+    public function register()
+    {
+        $this->reportable(function (Throwable $e) {
+            //
+        });
+    }
     
 }
