@@ -170,7 +170,7 @@
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
-                         this.test = 'room_number = 1';
+                         console.log(room_number);
                          factoryuser_array.push(factoryuserData);
 
                    }
