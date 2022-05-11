@@ -1,6 +1,7 @@
 <template>
   <div class="mt-2 mx-3" @mousemove.once="getFactoryusers">
     <h2>利用者一覧</h2>
+    {{test}}
     <label class="col-5 col-form-label">キーワード検索: </label>
     <div class="col-5">
       <input
@@ -143,6 +144,8 @@
             arrayData: [],
             half: 0,
             dataArrays: [],
+
+            test: '',
       }
     },
      computed: {
@@ -167,6 +170,7 @@
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
+                         this.test = 'room_number = 1';
                          factoryuser_array.push(factoryuserData);
 
                    }
