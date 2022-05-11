@@ -163,8 +163,7 @@
                        factoryuser_array.push(factoryuserData);
                     }
                     else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
-                        room_number === this.floorKeyword &&
-                        this.floorKeyword === '1' && Number(factoryuserData.number) < 10000 &&
+                        room_number === '1' && Number(factoryuserData.number) <= 10000 &&
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
