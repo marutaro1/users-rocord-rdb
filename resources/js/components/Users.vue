@@ -1,7 +1,7 @@
 <template>
   <div class="mt-2 mx-3" @mousemove.once="getFactoryusers">
     <h2>利用者一覧</h2>
-    <button @click="deletetest">delete</button>
+    <button @click="deleteTest">delete</button>
     <label class="col-5 col-form-label">キーワード検索: </label>
     <div class="col-5">
       <input
