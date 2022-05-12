@@ -30,4 +30,12 @@ class FactoryuserController extends Controller
         return $factoryuser;
     }
 
+    public function delete($id) 
+    {
+        $factoryuser = Factoryuser::find($id);
+        $factoryuser->delete();
+
+        return $factoryuser;   
+    }
+
 }
