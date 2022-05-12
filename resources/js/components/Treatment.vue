@@ -353,7 +353,7 @@
            editTreatmentRecordSelect(treatment_record) {
              if(treatment_record !== '') {
                this.edit_treatment_record = treatment_record.id;
-               this.update_treatment_record_day = treatment_record.day;
+               this.update_treatment_record_day = treatment_record.day.slice(0, -3);
                this.update_treatment_record_value = treatment_record.treatment_value;
              } else if(treatment_record === '') {
                this.edit_treatment_record = '';
@@ -371,7 +371,6 @@
               axios.put('/api/factoryusers/treatments/' + treatment_record.id, treatment_record_value).then((res) => {
                 console.log(res.data);
                 this.getTreatmentRecords();
-                this.update_treatment_record_day = '';
                 this.update_treatment_record_value = '';
               })
            },
