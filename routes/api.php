@@ -34,6 +34,7 @@ Route::get('/factoryusers', [FactoryuserController::class, 'index']);
 Route::post('/factoryusers', [FactoryuserController::class, 'store']);
 Route::get('/factoryusers/{factoryuser}', [FactoryuserController::class, 'show']);
 Route::put('/factoryusers/{factoryuser}', [FactoryuserController::class, 'update']);
+Route::delete('/factoryusers/{factoryuser}', [FactoryuserController::class, 'delete']);
 
 Route::get('/factoryusers/{factoryuser}/records', [RecordController::class, 'index']);
 Route::post('/factoryusers/{factoryuser}/records', [RecordController::class, 'store']);
