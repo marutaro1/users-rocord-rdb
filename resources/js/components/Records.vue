@@ -392,7 +392,7 @@
                   if( responce.data[0].day_record_check === recordData.day.slice(0,10) ) {
                   console.log(this.serchRecords[0].day.slice(0,10));
                     
-                      const day_record_check_value = this.serchRecords[0].day.slice(0,10);
+                      const day_record_check_value = this.serchRecords[1].day.slice(0,10);
                
                       const factoryuser = {
                         factoryuser_name: this.factoryuser_name,
