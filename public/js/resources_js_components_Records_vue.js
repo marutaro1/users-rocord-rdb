@@ -336,6 +336,8 @@ function _arrayLikeToArray(arr, len) {
     clearData: function clearData() {
       this.dayKeywordFirst = '';
       this.dayKeywordSecond = '';
+      this.start_day = new Date().getFullYear() + "-" + ("00" + (new Date().getMonth() + 1)).slice(-2) + "-01";
+      this.end_day = new Date().getFullYear() + "-" + ("00" + (new Date().getMonth() + 1)).slice(-2) + "-31";
       this.getSelectDay(this.start_day, this.end_day);
     },
     // 現在のページで表示するアイテムリストを取得する
