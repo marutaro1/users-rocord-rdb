@@ -312,6 +312,10 @@
                       this.record_value = '';
                       this.day = this.real_date;
                     })
+                  } else if(new Date ( this.day ).getTime() < new Date( responce.data[0].day_record_check + 'T00:00' ).getTime() ) {
+                      this.getRecord();
+                      this.record_value = '';
+                      this.day = this.real_date;
                   }
                 })
 

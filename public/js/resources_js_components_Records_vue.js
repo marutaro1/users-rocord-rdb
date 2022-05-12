@@ -201,6 +201,11 @@ function _arrayLikeToArray(arr, len) {
               _this3.record_value = '';
               _this3.day = _this3.real_date;
             });
+          } else if (new Date(_this3.day).getTime() < new Date(responce.data[0].day_record_check + 'T00:00').getTime()) {
+            _this3.getRecord();
+
+            _this3.record_value = '';
+            _this3.day = _this3.real_date;
           }
         });
       });
