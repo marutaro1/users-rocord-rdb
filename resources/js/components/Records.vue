@@ -55,7 +55,7 @@
       <button @click="trackDays(dayKeywordFirst, dayKeywordSecond)" class="btn btn-primary px-1">
        表示
       </button>
-      <button class="btn btn-primary px-1 mx-2">クリア</button>
+      <button @click="clearData" class="btn btn-primary px-1 mx-2">クリア</button>
     </div>
 
     <hr />
@@ -455,6 +455,11 @@
                   return Number(new Date(a.day)) - Number(new Date(b.day));
                 })
                 .reverse();
+            },
+
+            clearData() {
+              this.dayKeywordFirst = '';
+              this.dayKeywordSecond = '';
             },
 
            // 現在のページで表示するアイテムリストを取得する
