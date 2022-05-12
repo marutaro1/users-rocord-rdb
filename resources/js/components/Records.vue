@@ -385,6 +385,7 @@
                 this.getRecord();
 
                 axios.get('/api/factoryusers/' + this.id).then((responce) => {
+                  console.log(recordData);
 
                   if( responce.data[0].day_record_check === recordData.day.slice(0,10) ) {
                     
