@@ -163,6 +163,7 @@
                        factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1 &&
                        room_number.indexOf(this.floorKeyword) !== -1
                     ) {
+                       this.test = '空';
                        factoryuser_array.push(factoryuserData);
                     }
                     else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
