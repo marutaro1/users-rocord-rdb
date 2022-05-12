@@ -2,7 +2,6 @@
   <div class="mt-2 mx-3" @mousemove.once="getFactoryusers">
     <h2>利用者一覧</h2>
     {{test}}
-    {{floorKeyword}}
     <label class="col-5 col-form-label">キーワード検索: </label>
     <div class="col-5">
       <input
@@ -162,12 +161,21 @@
                     const room_number = String(factoryuserData.number).slice(0, -3);
                     if(factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
                        factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1 &&
+                       this.floorKeyword === '' &&
                        room_number.indexOf(this.floorKeyword) !== -1
                     ) {
                        this.test = '空';
                        factoryuser_array.push(factoryuserData);
                     }
-                    
+                    else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
+                        room_number === '1' && Number(factoryuserData.number) <= 10000 &&
+                        room_number.indexOf(this.floorKeyword) !== -1 &&
+                        factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
+                    )  {
+                         this.test = '1';
+                         factoryuser_array.push(factoryuserData);
+
+                   }
                     else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
                         room_number === this.floorKeyword &&
                         this.floorKeyword !== '1' &&
