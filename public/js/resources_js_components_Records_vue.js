@@ -274,9 +274,11 @@ function _arrayLikeToArray(arr, len) {
         _this6.getRecord();
 
         axios.get('/api/factoryusers/' + _this6.id).then(function (responce) {
-          console.log(recordData);
+          console.log(recordData.day);
 
           if (responce.data[0].day_record_check === recordData.day.slice(0, 10)) {
+            console.log(_this6.serchRecords[0].day.slice(0, 10));
+
             var day_record_check_value = _this6.serchRecords[0].day.slice(0, 10);
 
             var factoryuser = {
