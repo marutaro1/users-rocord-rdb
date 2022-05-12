@@ -382,10 +382,12 @@
            destoryRecord(record_data) {
              const recordData = record_data;
              axios.delete('/api/factoryusers/factoryuser/records/' + record_data.id).then(() => {
-                this.getSelectDay(this.start_day, this.end_day);
+                this.getRecord();
 
                 axios.get('/api/factoryusers/' + this.id).then((responce) => {
                   console.log(recordData.day);
+                  console.log(responce);
+                  console.log(this.serchRecords);
 
                   if( responce.data[0].day_record_check === recordData.day.slice(0,10) ) {
                   console.log(this.serchRecords[0].day.slice(0,10));

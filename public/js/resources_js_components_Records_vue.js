@@ -271,10 +271,12 @@ function _arrayLikeToArray(arr, len) {
 
       var recordData = record_data;
       axios["delete"]('/api/factoryusers/factoryuser/records/' + record_data.id).then(function () {
-        _this6.getSelectDay(_this6.start_day, _this6.end_day);
+        _this6.getRecord();
 
         axios.get('/api/factoryusers/' + _this6.id).then(function (responce) {
           console.log(recordData.day);
+          console.log(responce);
+          console.log(_this6.serchRecords);
 
           if (responce.data[0].day_record_check === recordData.day.slice(0, 10)) {
             console.log(_this6.serchRecords[0].day.slice(0, 10));
