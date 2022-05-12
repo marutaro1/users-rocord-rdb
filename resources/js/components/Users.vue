@@ -170,7 +170,7 @@
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
-                         console.log(room_number);
+                         this.test = '1';
                          factoryuser_array.push(factoryuserData);
 
                    }
@@ -180,7 +180,7 @@
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
-                      console.log('yes');
+                      this.test = '2,3,4,5,6,7,8,9,10';
                       factoryuser_array.push(factoryuserData);
                     }
                   };
