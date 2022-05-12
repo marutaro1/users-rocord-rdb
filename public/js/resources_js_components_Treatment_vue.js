@@ -196,6 +196,7 @@ __webpack_require__.r(__webpack_exports__);
         this.edit_treatment_record = treatment_record.id;
         this.update_treatment_record_day = treatment_record.day.slice(0, -3);
         this.update_treatment_record_value = treatment_record.treatment_value;
+        console.log(treatment_record.day.slice(0, -3));
       } else if (treatment_record === '') {
         this.edit_treatment_record = '';
       }
