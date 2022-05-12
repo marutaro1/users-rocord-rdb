@@ -109,7 +109,16 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     deleteTest: function deleteTest() {
-      axios["delete"]('/api/factoryusers/34');
+      var factoryuser = {
+        factoryuser_name: 'test_user:2',
+        birthday: '1970-11-16',
+        care_level: '自立',
+        number: 200,
+        day_record_check: '2022-05-12'
+      };
+      axios.put('/api/factoryusers/44', factoryuser).then(function (res) {
+        console.log(res.data);
+      });
     },
     getFactoryusers: function getFactoryusers() {
       var _this = this;

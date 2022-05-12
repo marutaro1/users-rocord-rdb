@@ -232,7 +232,16 @@
      },
     methods: {
       deleteTest() {
-        axios.delete('/api/factoryusers/34');
+         const factoryuser = {
+                        factoryuser_name: 'test_user:2',
+                        birthday: '1970-11-16',
+                        care_level: '自立',
+                        number: 200,
+                        day_record_check: '2022-05-12',
+                      }
+                      axios.put('/api/factoryusers/44', factoryuser).then((res) => {
+                        console.log(res.data);
+                      })
       },
       getFactoryusers() {
         this.boolean_day_record_check = false;
