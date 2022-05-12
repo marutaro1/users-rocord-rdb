@@ -458,7 +458,7 @@
             clearData() {
               this.dayKeywordFirst = '';
               this.dayKeywordSecond = '';
-              this.getRecord();
+              this.getSelectDay(this.start_day, this.end_day);
             },
 
            // 現在のページで表示するアイテムリストを取得する

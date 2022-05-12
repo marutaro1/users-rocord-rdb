@@ -336,7 +336,7 @@ function _arrayLikeToArray(arr, len) {
     clearData: function clearData() {
       this.dayKeywordFirst = '';
       this.dayKeywordSecond = '';
-      this.getRecord();
+      this.getSelectDay(this.start_day, this.end_day);
     },
     // 現在のページで表示するアイテムリストを取得する
     displayItems: function displayItems(array) {
