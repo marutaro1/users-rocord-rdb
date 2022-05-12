@@ -245,8 +245,6 @@ function _arrayLikeToArray(arr, len) {
 
       axios.get('/api/factoryusers/' + this.id + '/records').then(function (res) {
         _this5.factoryuser_record_data = res.data;
-        console.log(res.data);
-        console.log('get確認');
       });
     },
     getSelectDay: function getSelectDay(start, end) {
@@ -338,6 +336,7 @@ function _arrayLikeToArray(arr, len) {
     clearData: function clearData() {
       this.dayKeywordFirst = '';
       this.dayKeywordSecond = '';
+      this.getRecord();
     },
     // 現在のページで表示するアイテムリストを取得する
     displayItems: function displayItems(array) {

@@ -355,8 +355,6 @@
            getRecord() {
              axios.get('/api/factoryusers/' + this.id + '/records').then((res) => {
                this.factoryuser_record_data = res.data;
-               console.log(res.data);
-               console.log('get確認');
              });
            },
 
@@ -460,6 +458,7 @@
             clearData() {
               this.dayKeywordFirst = '';
               this.dayKeywordSecond = '';
+              this.getRecord();
             },
 
            // 現在のページで表示するアイテムリストを取得する
