@@ -1,7 +1,6 @@
 <template>
   <div class="mt-2 mx-3" @mousemove.once="getFactoryusers">
     <h2>利用者一覧</h2>
-    {{test}}
     <label class="col-5 col-form-label">キーワード検索: </label>
     <div class="col-5">
       <input
@@ -144,8 +143,6 @@
             arrayData: [],
             half: 0,
             dataArrays: [],
-
-            test: '',
       }
     },
      computed: {
@@ -164,7 +161,6 @@
                        this.floorKeyword === '' &&
                        room_number.indexOf(this.floorKeyword) !== -1
                     ) {
-                       this.test = '空';
                        factoryuser_array.push(factoryuserData);
                     }
                     else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 &&
@@ -172,7 +168,6 @@
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
-                         this.test = '1';
                          factoryuser_array.push(factoryuserData);
 
                    }
@@ -182,7 +177,6 @@
                         room_number.indexOf(this.floorKeyword) !== -1 &&
                         factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1
                     )  {
-                      this.test = '2,3,4,5,6,7,8,9,10';
                       factoryuser_array.push(factoryuserData);
                     }
                   };

@@ -36,8 +36,7 @@ __webpack_require__.r(__webpack_exports__);
       head: '',
       arrayData: [],
       half: 0,
-      dataArrays: [],
-      test: ''
+      dataArrays: []
     };
   },
   computed: {
@@ -53,13 +52,10 @@ __webpack_require__.r(__webpack_exports__);
         var room_number = String(factoryuserData.number).slice(0, -3);
 
         if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1 && this.floorKeyword === '' && room_number.indexOf(this.floorKeyword) !== -1) {
-          this.test = '空';
           factoryuser_array.push(factoryuserData);
         } else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && room_number !== '10' && Number(factoryuserData.number) <= 10000 && room_number.indexOf(this.floorKeyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1) {
-          this.test = '1';
           factoryuser_array.push(factoryuserData);
         } else if (factoryuserData.factoryuser_name.indexOf(this.keyword) !== -1 && room_number === this.floorKeyword && this.floorKeyword === '10' && room_number.indexOf(this.floorKeyword) !== -1 && factoryuserData.care_level.indexOf(this.serchCareLevelKeyword) !== -1) {
-          this.test = '2,3,4,5,6,7,8,9,10';
           factoryuser_array.push(factoryuserData);
         }
       }
@@ -298,9 +294,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onMousemoveOnce: _cache[9] || (_cache[9] = function () {
       return $options.getFactoryusers && $options.getFactoryusers.apply($options, arguments);
     })
-  }, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.test) + " ", 1
-  /* TEXT */
-  ), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [_hoisted_1, _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "class": "form-control",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
